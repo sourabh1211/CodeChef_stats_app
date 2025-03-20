@@ -6,7 +6,7 @@ export default function CodeChefProfile() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://codechef-api.vercel.app/handle/sourabh_1112")
+    fetch("https://codechef-api.vercel.app/handle/shwetank00")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data");
