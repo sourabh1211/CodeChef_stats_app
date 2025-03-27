@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-
 export default function CodeChefProfile() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
   useEffect(() => {
     fetch("https://codechef-api.vercel.app/handle/sourabh_1112")
       .then((response) => {
@@ -22,10 +20,8 @@ export default function CodeChefProfile() {
         setLoading(false);
       });
   }, []);
-
   if (loading) return <p className="text-center text-xl font-bold text-blue-600">Loading...</p>;
   if (error) return <p className="text-center text-red-500">Error: {error}</p>;
-
   return (
     <div className="p-8 max-w-lg mx-auto bg-gray-800 rounded-2xl shadow-2xl text-white text-center border border-gray-600">
       <img src={data.profile} alt="Profile" className="w-32 h-32 mx-auto rounded-full border-4 border-gray-400 shadow-lg" />
